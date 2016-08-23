@@ -1,0 +1,8 @@
+pipeline:
+  test:
+    image: evetools/elixir-build-base:latest
+    environment:
+      MIX_ENV: test
+    commands:
+      - mix do deps.get, deps.compile
+      - mix test
